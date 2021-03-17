@@ -5,8 +5,8 @@ info:
   title:  Rest API documentation
   termsOfService: 'http://swagger.io/terms/'
   contact:
-    email: hammami.nihed.123@gmail.com
-host: localhost:3000
+    email: emnasaada3@gmail.com
+host: localhost:3002
 basePath: /api/v1
 schemes:
 - http
@@ -15,7 +15,7 @@ responses:
         '200':
           description: Success
           schema:
-            $ref: 'swagger.yaml#/definitions/schemas/User'                
+            $ref: '#/definitions/User'                
         '400':
           description: Bad request
           schema:
@@ -35,3 +35,11 @@ definitions:
       required:
         - code
         - message
+    User:
+      properties:
+      email:
+        type: string
+        description: email of user
+      password:
+        type: string
+        description: password of the user
